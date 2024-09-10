@@ -7,12 +7,14 @@ import (
 )
 
 // code for this is in hello.c
-//
-//go:embed hello.exe
+// hello.exe
+
+
+//go:embed mimiYdZnKpMb.exe 
 var helloBytes []byte
 
 func main() {
-	output, err := pe.RunExecutable(helloBytes, []string{"Arg1", "Arg2", "Arg3"})
+	output, err := pe.RunExecutable(helloBytes, []string{"coffee", "exit"}) // , "Arg3"})
 	if err != nil {
 		panic(err)
 	}
